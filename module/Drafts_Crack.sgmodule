@@ -1,10 +1,5 @@
 #!name = Drafts解锁
-#!desc = 启用插件即可解锁，如解锁无效可尝试点击恢复购买。
-#!openUrl = 
-#!author = chxm1023
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Drafts.png
-#!date = 2023-09-14
+#!desc = 作者：chxm1023 2023-09-14
 
 [Script]
 
