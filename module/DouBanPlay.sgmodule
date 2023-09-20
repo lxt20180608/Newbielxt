@@ -1,1 +1,23 @@
+#!name=豆瓣
+#!desc=豆瓣电影移动端网页版广告净化,影视添加便捷播放源按钮,豆瓣手机App屏蔽开屏广告.
+#!author=Coldvvater ddgksf2013 Neurogram
+#!homepage=https://github.com/Coldvvater/Mononoke
+#!icon=https://raw.githubusercontent.com/Coldvvater/Coldvvater/master/img-folder/Douban.PNG
 
+[URL Rewrite]
+
+# 豆瓣App去开屏广告
+^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* - reject
+
+[Script]
+
+# 茶杯狐、Libvio 流媒体
+Streaming_11 = type=http-response, pattern=^https://m.douban.com/movie/subject/.+, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/douban.js, requires-body=true, max-size=3145728, timeout=30
+
+# Airtable 收藏
+Airtable_13 = type=http-request, pattern=^https://m.douban.com/movie/subject/.+\?seen=\d, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/douban.js, timeout=30
+
+[MITM]
+
+hostname = %APPEND% m.douban.com,api.douban.com
