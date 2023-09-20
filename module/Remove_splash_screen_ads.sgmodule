@@ -6,7 +6,8 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/Other_icon/120px/RemoveAds.png
 #!date = 2023-09-05 23:51:54
 
-[Rewrite]
+[URL Rewrite]
+
 # > version
 ^https?:\/\/2023.04.15\/v2.0.295 - reject
 # > 58
@@ -112,8 +113,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
 ^https?:\/\/fuss10.elemecdn.com\/.+.mp4 - reject
 ^https?:\/\/www1.elecfans.com\/www\/delivery\/ - reject
-# > echongdian
-^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 - reject-200
 # > fandengdushu
 ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig - reject
 # > feizhu
@@ -136,12 +135,7 @@ https://guanyu.longfor.com/app-server/api/v1/main/start - reject
 ^http:\/\/open\.fitdays\.cn\/uploads\/ad\/ - reject
 # > huazhu
 ^https?:\/\/appapi\.huazhu\.com:\d{4}\/client\/app\/getAppStartPage\/ - reject
-# > hupu
-^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ - reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. - reject-img
-^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor - reject-img
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther - reject
-^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} - reject-img
 # > hongbanbao
 https://fbchina.flipchina.cn/v2/ad/query/* - reject
 # > huyazhibo
@@ -162,18 +156,6 @@ https://fbchina.flipchina.cn/v2/ad/query/* - reject
 ^https?:\/\/api\.touker\.com\/v2\/IAdvertisementAPI\.queryStartAdvertisement - reject
 # > i4
 ^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
-# > jingdongdushu
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens - reject-200
-^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup - reject-200
-# > jingdong
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) - reject-200
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject-200
-# > jingdongjinrong
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture - reject-200
-# > jingdongyun
-^https:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash - reject-200
-# > jianxun
-^https?:\/\/api\.tipsoon\.com\/api\/v\d\/top\/ad - reject-200
 # > jiaohangmaidanba
 ^https?:\/\/creditcardapp\.bankcomm\.com\/mapp\/common\/(queryGuidePageAds|getPopAds)\.do$ - reject
 # > jiemianxinwen
@@ -192,18 +174,13 @@ https://fbchina.flipchina.cn/v2/ad/query/* - reject
 ^https?:\/\/res.kfc.com.cn\/advertisement\/ - reject
 # > kuaikan
 ^https?:\/\/api.kkmh.com\/v\d\/(ad|advertisement)\/ - reject
-^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch - reject-dict
 # > kanlixiang
 ^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement - reject
 # > kantianxia
 https://open3.vistastory.com/v3/api/index/loading_ad - reject
 https://open3.vistastory.com/v3/api.*get_popup - reject
-# > kuake
-^https?:\/\/open-cms-api\.uc\.cn\/open-cms - reject-dict
 # > kuaishou
 ^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ - reject
-# > lingclub
-^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode - reject-200
 # > linxi
 ^https?:\/\/api\.internetofcity\.cn\/api\/resource\/anon\/popups\/(getSplashList|getList) - reject
 # > lecheng
@@ -253,8 +230,6 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do - reject
 # > mixuebingcheng
 ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/limitedAds$ - reject
-# > maoyan*
-^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? - reject-img
 # > nanfanghangkong
 ^https?:\/\/3g\.csair\.com\/CSMBP\/bookProcess\/homepopup\/queryAdvertisement - reject
 # > omofun
@@ -293,9 +268,6 @@ https://homefront.qunar.com/front/splash/ad - reject
 https://ios.sspai.com/api/v3/recommend/page/get\?ad.*ios_home_modal - reject
 # > ShunFengYouXuan
 ^https://mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* - reject
-# > spotify
-^https?://spclient.wg.spotify.com/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) - reject-img
-^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ - reject-img
 # > SanLianZhongDu
 https://apis.lifeweek.com.cn/api/baseConfig/getIosNewConfig - reject
 # > ShunFeng
@@ -456,8 +428,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 ^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad - reject
 # > ziru
 ^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open - reject
-# > zhongguoyinhang
-#^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-img
 # > zhuijudaren
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) - reject
 # > zhangshangyingxionglianmeng
@@ -466,60 +436,116 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do - reject
 ^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 - reject
 
 [Script]
+
 # > 12306
-http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://github.com/ddgksf2013/Scripts/raw/master/12306.js, requires-body = true
+12306_467 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js, requires-body=true, max-size=3145728, timeout=30
 
 # > baiduditu
-http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js, requires-body = true
+baidumap_469 = type=http-response, pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js, requires-body=true, max-size=3145728, timeout=30
 
 # > crunchyroll
-http-response https://beta-api.crunchyroll.com/cms script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "offset_ms":\d+->offset_ms":99999999999999"
+replace-body_471 = type=http-response, pattern=https://beta-api.crunchyroll.com/cms, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "offset_ms":\d+->offset_ms":99999999999999"
 
 # > caixin
-http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path = https://github.com/ddgksf2013/Scripts/raw/master/caixinads.js, requires-body = true
+caixinads_473 = type=http-response, pattern=^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362, script-path=https://github.com/ddgksf2013/Scripts/raw/master/caixinads.js, requires-body=true, max-size=3145728, timeout=30, argument = "offset_ms":\d+->offset_ms":99999999999999"
 
 # > donghuafeng
+#BahamutAnimeAds_475 = type=http-response, pattern=^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\?, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body=true, max-size=3145728, timeout=30, argument = "offset_ms":\d+->offset_ms":99999999999999"
 #http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true
-http-response ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument="adv->ddgksf2013"
-http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://github.com/ddgksf2013/Scripts/raw/master/fly.js, requires-body = true
+replace-body_476 = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument="adv->ddgksf2013"
+
+fly_477 = type=http-response, pattern=^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1, script-path=https://github.com/ddgksf2013/Scripts/raw/master/fly.js, requires-body=true, max-size=3145728, timeout=30, argument="adv->ddgksf2013"
 
 # > i3
-#http-response ^https?:\/\/www\.i3zh\.com script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "cm-pop-up-banners->ddgksf2013"
+#replace-body_479 = type=http-response, pattern=^https?:\/\/www\.i3zh\.com, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "cm-pop-up-banners->ddgksf2013"
 # > iQiYi
-http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://github.com/ddgksf2013/Scripts/raw/master/iqiyi_open_ads.js, requires-body = true
+iqiyi_open_ads_481 = type=http-response, pattern=^https?:\/\/.*cupid\.iqiyi\.com\/mixer\?, script-path=https://github.com/ddgksf2013/Scripts/raw/master/iqiyi_open_ads.js, requires-body=true, max-size=3145728, timeout=30, argument = "cm-pop-up-banners->ddgksf2013"
 
 # > jingxi
-http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://github.com/ddgksf2013/Scripts/raw/master/startup.js, requires-body = true
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) script-path = https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js, requires-body = true
+startup_483 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show, script-path=https://github.com/ddgksf2013/Scripts/raw/master/startup.js, requires-body=true, max-size=3145728, timeout=30, argument = "cm-pop-up-banners->ddgksf2013"
+
+jd_json_484 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms), script-path=https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js, requires-body=true, max-size=3145728, timeout=30, argument = "cm-pop-up-banners->ddgksf2013"
 
 # > jingdonglite
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "jdLiteAdvertisingVO->ddgksf2013"
+replace-body_486 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "jdLiteAdvertisingVO->ddgksf2013"
 
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "pushData->ddgksf2013"
+replace-body_487 = type=http-response, pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "pushData->ddgksf2013"
 
 # > ku'an
-http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path = https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body = true
+coolapk_489 = type=http-response, pattern=^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList), script-path=https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js, requires-body=true, max-size=3145728, timeout=30, argument = "pushData->ddgksf2013"
 
 # > spotify pro
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true, binary-body-mode = true
+spotify-proto_491 = type=http-response, pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body=true, max-size=3145728, binary-body-mode=true, timeout=30, argument = "pushData->ddgksf2013"
 
-http-response https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow script-path = https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js, requires-body = true
+shunfeng_json_492 = type=http-response, pattern=https://ccsp-egmas.sf-express.com/cx-app-base/base/app/ad/queryInfoFlow, script-path=https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js, requires-body=true, max-size=3145728, timeout=30, argument = "pushData->ddgksf2013"
 
 # > Stay
-# http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/stay.js, requires-body = true
-
+#stay_494 = type=http-response, pattern=http-response, script-path=https://github.com/ddgksf2013/Scripts/raw/master/stay.js, requires-body=true, max-size=3145728, timeout=30, argument = "pushData->ddgksf2013"
 # > tianfutong
-http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "officialAdvertResultVo->ddgksf2013"
+replace-body_496 = type=http-response, pattern=^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "officialAdvertResultVo->ddgksf2013"
 
 # > WeChatpublicarticle
+#replace-body_498 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = ""advertisement_num":\d,"
 # http-response ^(http|https):\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = ""advertisement_num":\d,"advertisement_info":\[.+\],->"advertisement_num":0,"advertisement_info":[],"
-#http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "dataList":\[.+\]->dataList":[{}]"
-
+#replace-body_499 = type=http-response, pattern=^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "dataList":\[.+\]->dataList":[{}]"
 # > XiaoTe
-http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "screenSplashAd->ddgksf2013"
+replace-body_501 = type=http-response, pattern=^https?:\/\/lcen\.xiaote\.net\/api\/graphql, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "screenSplashAd->ddgksf2013"
 
 # > Zhihu
-http-response ^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2 script-path = https://github.com/ddgksf2013/Scripts/raw/master/zhihu_openads.js, requires-body = true
+zhihu_openads_503 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2, script-path=https://github.com/ddgksf2013/Scripts/raw/master/zhihu_openads.js, requires-body=true, max-size=3145728, timeout=30, argument = "screenSplashAd->ddgksf2013"
 
-[Mitm]
-hostname = open-cms-api.uc.cn, yxyapi2.yuxueyuan.cn, pan-api.bitqiu.com, m.ctrip.com, client.tujia.com, vip7.fzwdyy.cn, run.api.qyfxgd.cn, *cupid.iqiyi.com, gateway.36kr.com, shopapi.io.mi.com, tk.lanjiyin.com, gongdu.youshu.cc, api.21ec74.com, ztoread.ziroom.com, iphone.ac.qq.com, web.chelaile.net.cn, gd.10086.cn, api.00bang.cn, app.hbooker.com, api.sfacg.com, newclient.map.baidu.com, api3.cls.cn, gateway-api.dushu365.com, p0.pipi.cn, jdread-api.jd.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, api.m.jd.com, router-app-api.jdcloud.com, app.homeinns.com, cdn-evone-ceph.echargenet.com, mlol.qt.qq.com, gg.caixin.com, app-gw.csdn.net, api.gameplus.qq.com, mrobot.pconline.com.cn, djcapp.game.qq.com, mxsa.mxbc.net, zjdr666.com, api.caiyunapp.com, api.ahmobile.cn, gx.10086.cn, emdcadvertise.eastmoney.com, acs.m.taobao.com, api-sams.walmartmobile.cn, creditcardapp.bankcomm.cn, m.creditcard.ecitic.com, lban.spdb.com.cn, adapi.izuiyou.com, i.ys7.com, apps.api.ke.com, api.yonghuivip.com, access.mypikpak.com, gateway.shouqiev.com, res.pizzahut.com.cn, api.caijingmobile.com, 3g.csair.com, client-api.oray.com, bgw.xinyue.qq.com, api-new.app.acfun.cn, m.client.10010.com, open.fitdays.cn, gha.ghac.cn, ap.dongqiudi.com, sh-gateway.shihuo.cn, wcprd.hilton.com, ad.12306.cn, 103.91.210.141, adx-cn.anythinktech.com, js-ad.ayximgs.com, api.dangdang.com, pzoap.moedot.com, pipi.4kya.com, vip7.fzwdyy.cn, sdk.alibaba.com.ailbaba.me, tft-app.cdtft.cn, bgw.xinyue.qq.com, pan.baidu.com, yunbusiness.ccb.com, client.app.coc.10086.cn, t1.market.xiaomi.com, api.m.mi.com, app.zhuanzhuan.com, api.cloud.189.cn, appwk.baidu.com, us.l.qq.com, open.e.kuaishou.com, mi.gdt.qq.com, emdcadvertise.eastmoney.com, adm.10jqka.com.cn, a.qiumibao.com, api.tipsoon.com, b.appsimg.com, ios.sspai.com, zconfig.alibabausercontent.com, api.touker.com, mpcs.suning.com, api.pinduoduo.com, api.yangkeduo.com, easyreadfs.nosdn.127.net, sp.kaola.com, gw.kaola.com, mime.baidu.com, learn.chaoxing.com, mapi.dangdang.com, api.dangdang.com, open.e.kuaishou.com, client.qunar.com, mpos-pic.helipay.com, dili.bdatu.com, wap.ngchina.cn, ih2.ireader.com, adpai.thepaper.cn, api.haohaozhu.cn, list-app-m.i4.cn, api.xiachufang.com, peisongapi.meituan.com, *gaoqingdianshi.com, *.kakamobi.cn, api.jxedt.com, slapi.oray.net, r.inews.qq.com, app.yinxiang.com, mapi.appvipshop.com, syh.zybang.com, cdn.cmgadx.com, api.internetofcity.cn, img.meituan.net, lcen.xiaote.net, venus.yhd.com, api.shenyin.name, mage*.if.qidian.com, god.gameyw.netease.com, m.ibuscloud.com, e.dangdang.com, app2.autoimg.cn, adproxy.autohome.com.cn, discardrp.umetrip.com, startup.umetrip.com, explorer.tratao.com, overseas.weico.cc, 118.178.214.118, dapis.mting.info, acs.m.taobao.com, open3.vistastory.com, ssp.dzh.com.cn, maicai.api.ddxq.mobi, www.meituan.com, client.mail.163.com, api.izuiyou.com, appapi.huazhu.com, api.wfdata.club, interface*.music.163.com, api.psy-1.com, res.kfc.com.cn, mp.weixin.qq.com, security.wechat.com, weixin110.qq.com, cdn.*.chelaileapp.cn, api.coolapk.com, app3.qdaily.com, daoyu.sdo.com, img.jiemian.com, ccsp-egmas.sf-express.com, *.laichon.com, app.ap.d3yuiw4.com, www.i3zh.com, api.yikaobang.com.cn, api-ad-product.huxiu.com, jad-api.jin10.com, mob.mddcloud.com.cn, appactive.1234567.com.cn, rtbapi.douyucdn.cn, service.busi.inke.cn, gab.122.gov.cn, dispatcher.camera360.com, app.api.versa-ai.com, open.taou.com, api.taou.com, track.mm.taou.com, app.dewu.com, data-collector.soulapp.cn, api.gamer.com.tw, beta-api.crunchyroll.com, api.vistopia.com.cn, pss.txffp.com, m.sd.10086.cn, helper.2bulu.com, 47.100.65.202, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, wap.js.10086.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com, tel.mangaapi.manhuaren.com, apis.lifeweek.com.cn, support.you.163.com, yanxuan.nosdn.127.net, *.peopleapp.com, new-app-api.ylyk.com, gw.aihuishou.com, *.58cdn.com.cn, app.58.com, api.zhihu.com, creditcardapp.bankcomm.com, res.xiaojukeji.com, 116.85.2.15, 116.85.2.14, lchttpapi.xczim.com, business.msstatic.com, mangaapi.manhuaren.com, api.kkmh.com, *.chelaile.net.cn, api.jr.mi.com, api.m.mi.com, guanyu.longfor.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, m.tuniu.com, mapi.mafengwo.cn, api.xiaoyi.com, api.douban.com, otheve.beacon.qq.com, mapi.sfbest.com, api.mwee.cn, sso.ifanr.com, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, testflight.apple.com, wmapi.meituan.com, appconf.mail.163.com, dl-cu-hz.lechange.cn, fbchina.flipchina.cn, zone.guiderank-app.com, homefront.qunar.com, afd.baidu.com, j-image.missfresh.cn, ma-adx.ctrip.com, mbd.baidu.com, img.rr.tv, api.rr.tv, *.hoopchina.com, goblin.hupu.com, spclient.wg.spotify.com
+[Map Local]
+
+# > echongdian
+^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > hupu
+^https?:\/\/i\d\.hoopchina\.com\.cn/blogfile\//d+\//d+\/BbsImg\.(?<=(big.(png|jpg)))$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+^https?:\/\/games\.mobileapi\.hupu\.com\/.+\/(search|interfaceAdMonitor|status|hupuBbsPm)/(hotkey|init|hupuBbsPm)\. data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+^https?:\/\/i1\.hoopchina\.com\.cn\/blogfile\/.+_\d{3}x\d{4} data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+# > jingdongdushu
+^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > jingdong
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > jingdongjinrong
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > jingdongyun
+^https:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > jianxun
+^https?:\/\/api\.tipsoon\.com\/api\/v\d\/top\/ad data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > kuake
+^https?:\/\/open-cms-api\.uc\.cn\/open-cms data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# > lingclub
+^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+# > maoyan*
+^https?:\/\/p0\.pipi\.cn\/adAdmin\/\w+.jpg\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+# > spotify
+^https?://spclient.wg.spotify.com/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+# > zhongguoyinhang
+^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+
+[MITM]
+
+hostname = %APPEND% open-cms-api.uc.cn,yxyapi2.yuxueyuan.cn,pan-api.bitqiu.com,m.ctrip.com,client.tujia.com,vip7.fzwdyy.cn,run.api.qyfxgd.cn,*cupid.iqiyi.com,gateway.36kr.com,shopapi.io.mi.com,tk.lanjiyin.com,gongdu.youshu.cc,api.21ec74.com,ztoread.ziroom.com,iphone.ac.qq.com,web.chelaile.net.cn,gd.10086.cn,api.00bang.cn,app.hbooker.com,api.sfacg.com,newclient.map.baidu.com,api3.cls.cn,gateway-api.dushu365.com,p0.pipi.cn,jdread-api.jd.com,ms.jr.jd.com,bdsp-x.jd.com,dsp-x.jd.com,api.m.jd.com,router-app-api.jdcloud.com,app.homeinns.com,cdn-evone-ceph.echargenet.com,mlol.qt.qq.com,gg.caixin.com,app-gw.csdn.net,api.gameplus.qq.com,mrobot.pconline.com.cn,djcapp.game.qq.com,mxsa.mxbc.net,zjdr666.com,api.caiyunapp.com,api.ahmobile.cn,gx.10086.cn,emdcadvertise.eastmoney.com,acs.m.taobao.com,api-sams.walmartmobile.cn,creditcardapp.bankcomm.cn,m.creditcard.ecitic.com,lban.spdb.com.cn,adapi.izuiyou.com,i.ys7.com,apps.api.ke.com,api.yonghuivip.com,access.mypikpak.com,gateway.shouqiev.com,res.pizzahut.com.cn,api.caijingmobile.com,3g.csair.com,client-api.oray.com,bgw.xinyue.qq.com,api-new.app.acfun.cn,m.client.10010.com,open.fitdays.cn,gha.ghac.cn,ap.dongqiudi.com,sh-gateway.shihuo.cn,wcprd.hilton.com,ad.12306.cn,103.91.210.141,adx-cn.anythinktech.com,js-ad.ayximgs.com,api.dangdang.com,pzoap.moedot.com,pipi.4kya.com,vip7.fzwdyy.cn,sdk.alibaba.com.ailbaba.me,tft-app.cdtft.cn,bgw.xinyue.qq.com,pan.baidu.com,yunbusiness.ccb.com,client.app.coc.10086.cn,t1.market.xiaomi.com,api.m.mi.com,app.zhuanzhuan.com,api.cloud.189.cn,appwk.baidu.com,us.l.qq.com,open.e.kuaishou.com,mi.gdt.qq.com,emdcadvertise.eastmoney.com,adm.10jqka.com.cn,a.qiumibao.com,api.tipsoon.com,b.appsimg.com,ios.sspai.com,zconfig.alibabausercontent.com,api.touker.com,mpcs.suning.com,api.pinduoduo.com,api.yangkeduo.com,easyreadfs.nosdn.127.net,sp.kaola.com,gw.kaola.com,mime.baidu.com,learn.chaoxing.com,mapi.dangdang.com,api.dangdang.com,open.e.kuaishou.com,client.qunar.com,mpos-pic.helipay.com,dili.bdatu.com,wap.ngchina.cn,ih2.ireader.com,adpai.thepaper.cn,api.haohaozhu.cn,list-app-m.i4.cn,api.xiachufang.com,peisongapi.meituan.com,*gaoqingdianshi.com,*.kakamobi.cn,api.jxedt.com,slapi.oray.net,r.inews.qq.com,app.yinxiang.com,mapi.appvipshop.com,syh.zybang.com,cdn.cmgadx.com,api.internetofcity.cn,img.meituan.net,lcen.xiaote.net,venus.yhd.com,api.shenyin.name,mage*.if.qidian.com,god.gameyw.netease.com,m.ibuscloud.com,e.dangdang.com,app2.autoimg.cn,adproxy.autohome.com.cn,discardrp.umetrip.com,startup.umetrip.com,explorer.tratao.com,overseas.weico.cc,118.178.214.118,dapis.mting.info,acs.m.taobao.com,open3.vistastory.com,ssp.dzh.com.cn,maicai.api.ddxq.mobi,www.meituan.com,client.mail.163.com,api.izuiyou.com,appapi.huazhu.com,api.wfdata.club,interface*.music.163.com,api.psy-1.com,res.kfc.com.cn,mp.weixin.qq.com,security.wechat.com,weixin110.qq.com,cdn.*.chelaileapp.cn,api.coolapk.com,app3.qdaily.com,daoyu.sdo.com,img.jiemian.com,ccsp-egmas.sf-express.com,*.laichon.com,app.ap.d3yuiw4.com,www.i3zh.com,api.yikaobang.com.cn,api-ad-product.huxiu.com,jad-api.jin10.com,mob.mddcloud.com.cn,appactive.1234567.com.cn,rtbapi.douyucdn.cn,service.busi.inke.cn,gab.122.gov.cn,dispatcher.camera360.com,app.api.versa-ai.com,open.taou.com,api.taou.com,track.mm.taou.com,app.dewu.com,data-collector.soulapp.cn,api.gamer.com.tw,beta-api.crunchyroll.com,api.vistopia.com.cn,pss.txffp.com,m.sd.10086.cn,helper.2bulu.com,47.100.65.202,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com,new.vip.weibo.cn,wap.js.10086.cn,tagit.hyhuo.com,top-widgets-api.xiaozujian.com,tel.mangaapi.manhuaren.com,apis.lifeweek.com.cn,support.you.163.com,yanxuan.nosdn.127.net,*.peopleapp.com,new-app-api.ylyk.com,gw.aihuishou.com,*.58cdn.com.cn,app.58.com,api.zhihu.com,creditcardapp.bankcomm.com,res.xiaojukeji.com,116.85.2.15,116.85.2.14,lchttpapi.xczim.com,business.msstatic.com,mangaapi.manhuaren.com,api.kkmh.com,*.chelaile.net.cn,api.jr.mi.com,api.m.mi.com,guanyu.longfor.com,elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,m.tuniu.com,mapi.mafengwo.cn,api.xiaoyi.com,api.douban.com,otheve.beacon.qq.com,mapi.sfbest.com,api.mwee.cn,sso.ifanr.com,s3plus.meituan.net,flowplus.meituan.net,p*.meituan.net,testflight.apple.com,wmapi.meituan.com,appconf.mail.163.com,dl-cu-hz.lechange.cn,fbchina.flipchina.cn,zone.guiderank-app.com,homefront.qunar.com,afd.baidu.com,j-image.missfresh.cn,ma-adx.ctrip.com,mbd.baidu.com,img.rr.tv,api.rr.tv,*.hoopchina.com,goblin.hupu.com,spclient.wg.spotify.com
