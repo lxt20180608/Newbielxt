@@ -1,8 +1,5 @@
-#!name=豆瓣
-#!desc=豆瓣电影移动端网页版广告净化,影视添加便捷播放源按钮,豆瓣手机App屏蔽开屏广告.
-#!author=Coldvvater ddgksf2013 Neurogram
-#!homepage=https://github.com/Coldvvater/Mononoke
-#!icon=https://raw.githubusercontent.com/Coldvvater/Coldvvater/master/img-folder/Douban.PNG
+#!name=豆瓣去广告(网页)
+#!desc=作者：Coldvvater ddgksf2013 Neurogram
 
 [URL Rewrite]
 
