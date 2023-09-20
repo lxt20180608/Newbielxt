@@ -1,10 +1,5 @@
 #!name = Bilibili去广告
-#!desc = @RuCu6
-#!openUrl = 
-#!author = RuCu6 VirgilClyne Maasea ClydeTimea BiliUniverse kokoryh app2smile 
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Bilibili.png
-#!date = 2023-09-05 20:58:53
+#!desc = 作者：RuCu6 2023-09-05
 
 [Rule]
 
