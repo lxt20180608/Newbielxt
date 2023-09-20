@@ -1,3 +1,4 @@
 # SpecialDomain
 # 自用需要直连的特殊域名
 DOMAIN-SUFFIX,amyconvert.com
+DOMAIN-SUFFIX,tailscale.com
