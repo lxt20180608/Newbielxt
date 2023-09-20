@@ -1,10 +1,5 @@
 #!name = 什么值得买去广告
-#!desc = 过滤开屏、首页、搜索标签、搜索结果、好价详情页、好价详情页红包小助手、百科页面、值会员权益中心横幅以及618晒物活动推广等广告内容。
-#!openUrl = 
-#!author = RuCu6
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/smzdm.png
-#!date = 2023-09-08 13:48:55
+#!desc = 作者：RuCu6 2023-09-08
 
 [Rule]
 
