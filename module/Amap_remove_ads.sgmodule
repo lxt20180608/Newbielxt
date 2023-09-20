@@ -1,10 +1,5 @@
 #!name = 高德地图去广告
-#!desc = @RuCu6
-#!openUrl = 
-#!author = RuCu6 kokoryh
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Amap.png
-#!date = 2023-09-15 11:20:57
+#!desc = 作者：RuCu6 kokoryh 2023-09-15
 
 [Rule]
 
