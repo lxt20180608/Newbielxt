@@ -2,4 +2,4 @@
 # 自用需要直连的特殊域名
 DOMAIN-SUFFIX,amyconvert.com
 DOMAIN-SUFFIX,tailscale.com
-DOMAIN-SUFFIX,ieee.org
+DOMAIN-SUFFIX,ieeexplore.ieee.org
