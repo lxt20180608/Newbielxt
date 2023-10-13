@@ -1,27 +1,36 @@
 #!name = 菜鸟去广告
-#!desc = 作者：keywos RuCu6 2023-08-27
+#!desc = 作者：keywos RuCu6 2023-10-10
 
 [Rule]
 
+DOMAIN, adsmind.ugdtimg.com,REJECT
+DOMAIN, amdc.m.youku.com,REJECT
+DOMAIN, apiv4-iyes.youku.com,REJECT
+DOMAIN, httpdns.alicdn.com,REJECT
+DOMAIN, huichuan-mc.sm.cn,REJECT
+DOMAIN, huichuan.sm.cn,REJECT
 DOMAIN, iyes.youku.com,REJECT
-DOMAIN, vali.cp31.ott.cibntv.net,REJECT
-IP-CIDR, 117.161.156.227/32,REJECT
+DOMAIN, mc.atm.youku.com,REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net,REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net,REJECT
+DOMAIN, yk-ssp.ad.youku.com,REJECT
+DOMAIN, ykad-data.youku.com,REJECT
 
 [Script]
 
 # 移除阿里巴巴通用广告请求
-移除阿里巴巴通用广告请求_27 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js, timeout=30
+移除阿里巴巴通用广告请求_37 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js, timeout=30
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
-移除首页推广_29 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+移除首页推广_39 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
-移除首页推广_30 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+移除首页推广_40 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
 # 消息中心
-移除消息中心推广_32 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+移除消息中心推广_42 = type=http-response, pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
 # 支付宝 - 菜鸟小程序
-移除菜鸟小程序推广_34 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+移除菜鸟小程序推广_44 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Cainiao/Cainiao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
 [Map Local]
 
@@ -36,7 +45,7 @@ IP-CIDR, 117.161.156.227/32,REJECT
 
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(acquire|event|close)\.cn data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(homepage\.merge|tabbar\.marketing)\.get\.cn data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 发现页 - 数字角标、裹裹券
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.com\.cainiao\.cnactivitycenter data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
