@@ -1,1 +1,27 @@
+#!name = 京东去广告
+#!desc = 移除京东开屏广告及我的页面广告，需要启用MitM-over-HTTP/2功能，否则失效。
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/JD.png
+#!date = 2023-10-27 16:05:12
 
+[URL Rewrite]
+
+# 京东 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject
+
+[Script]
+
+移除京东广告_14 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+
+[Map Local]
+
+# 开屏广告
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
+[MITM]
+
+hostname = %APPEND% api.m.jd.com,bdsp-x.jd.com,dsp-x.jd.com
