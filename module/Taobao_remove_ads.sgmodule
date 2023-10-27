@@ -1,10 +1,5 @@
 #!name = 淘宝去广告
-#!desc = 过滤淘宝开屏广告
-#!openUrl = 
-#!author = RuCu6
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/Taobao.png
-#!date = 2023-10-26 19:35:51
+#!desc = 作者：RuCu6 2023-10-26
 
 [Script]
 
