@@ -1,24 +1,5 @@
 #!name = 京东去广告
 #!desc = 作者：RuCu6 2023-10-27
+#!date = 2023-10-29
 
-#!date = 2023-10-27 16:05:12
 
-[URL Rewrite]
-
-# 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject
-
-[Script]
-
-移除京东广告_14 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
-
-[Map Local]
-
-# 开屏广告
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-
-[MITM]
-
-hostname = %APPEND% api.m.jd.com,bdsp-x.jd.com,dsp-x.jd.com
