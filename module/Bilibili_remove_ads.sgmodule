@@ -19,7 +19,7 @@ URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{3
 [Script]
 
 # 移除播放页面视频列表广告
-移除播放页面视频列表广告_36 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_helper_beta.js, requires-body=true, max-size=3145728, binary-body-mode=true, timeout=30
+# 移除播放页面视频列表广告_36 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_helper_beta.js, requires-body=true, max-size=3145728, binary-body-mode=true, timeout=30
 
 # 移除搜索结果广告 - 待完善
 移除搜索结果广告_38 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_helper_beta.js, requires-body=true, max-size=3145728, binary-body-mode=true, timeout=30
