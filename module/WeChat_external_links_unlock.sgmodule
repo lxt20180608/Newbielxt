@@ -3,7 +3,7 @@
 
 [Script]
 
-微信外部链接解锁_8 = type=http-response, pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body=true, max-size=3145728, timeout=30
+微信外部链接解锁_8 = type=http-response, pattern=^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body=true, max-size=3145728, timeout=30
 
 [MITM]
 
