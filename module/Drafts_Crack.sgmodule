@@ -3,7 +3,7 @@
 
 [Script]
 
-Drafts解锁_8 = type=http-response, pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Drafts/Drafts_crack.js, requires-body=true, max-size=3145728, timeout=30
+Drafts解锁_8 = type=http-response, pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Drafts/Drafts_crack.js, requires-body=true, max-size=3145728, timeout=30
 
 [MITM]
 
