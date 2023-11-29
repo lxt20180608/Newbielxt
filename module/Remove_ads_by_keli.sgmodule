@@ -105,7 +105,7 @@ DOMAIN,waapdg.jd.com,REJECT
 [Script]
 
 # 快手联盟、优量汇、穿山甲
-移除广告联盟广告_180 = type=http-response, pattern=^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body=true, max-size=3145728, timeout=30
+移除广告联盟广告_180 = type=http-response, pattern=^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body=true, max-size=3145728, timeout=30
 
 [Map Local]
 
