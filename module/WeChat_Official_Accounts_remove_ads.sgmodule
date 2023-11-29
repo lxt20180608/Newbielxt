@@ -4,7 +4,7 @@
 [Script]
 
 # [Script]
-#微信公众号去广告_11 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+#微信公众号去广告_11 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
 [Map Local]
 
