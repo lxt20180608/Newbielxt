@@ -1,19 +1,19 @@
 #!name = 京东去广告
-#!desc = 作者：RuCu6 2023-10-29
+#!desc = 作者：RuCu6 2023-11-29
 
 [Rule]
 
-DOMAIN, dns.jd.com,REJECT
-IP-CIDR, 101.124.19.122/32,REJECT
-IP-CIDR6, 2402:db40:5100:1011::5/128,REJECT
+DOMAIN,dns.jd.com,REJECT
+IP-CIDR,101.124.19.122/32,REJECT,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
 
 [Script]
 
-移除京东广告_14 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/JD/JD_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+移除京东广告_14 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/JD/JD_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
 [Map Local]
 
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [MITM]
 
