@@ -1,10 +1,6 @@
 #!name = 什么值得买去广告
 #!desc = 作者：RuCu6 2023-12-13
 
-[MITM]
-
-hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com
-
 [Script]
 
 移除广告 = type=http-response, pattern=^https:\/\/app-api\.smzdm\.com\/util\/(loading|update), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/smzdm/smzdm_remove_ads.js, requires-body=true
@@ -16,3 +12,7 @@ hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.
 移除广告 = type=http-response, pattern=^https:\/\/user-api\.smzdm\.com\/vip, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/smzdm/smzdm_remove_ads.js, requires-body=true
 
 移除广告 = type=http-response, pattern=^https:\/\/article-api\.smzdm\.com\/publish\/get_bubble, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/smzdm/smzdm_remove_ads.js, requires-body=true
+
+[MITM]
+
+hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com
