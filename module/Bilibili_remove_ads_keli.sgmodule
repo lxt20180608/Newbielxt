@@ -1,25 +1,28 @@
 #!name = Bilibili去广告
-#!desc = 作者：Maasea RuCu6 2023-12-10
+#!desc = 作者：Maasea RuCu6 2023-12-28
+
+[MITM]
+hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
 
 [Rule]
-
 # 开屏广告
-URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH,REJECT
-URL-REGEX,^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH,REJECT
+URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH,REJECT-TINYGIF
+URL-REGEX,^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH,REJECT-TINYGIF
 
 [URL Rewrite]
-
 # 移除搜索中的默认关键词
 ^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
 # 屏蔽默认搜索框关键词
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
+^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
 # IP请求、地理位置请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 
 [Map Local]
-
 # 开屏广告
 ^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 满意度调研
+^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 移除搜索中的大家都在搜
 ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -41,10 +44,9 @@ URL-REGEX,^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH,REJECT
 
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 [Script]
-
 # 移除播放页面视频列表广告
 移除播放页面视频列表广告 = type=http-response, pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_helper_beta.js, requires-body=true, binary-body-mode=true
 
@@ -98,7 +100,3 @@ URL-REGEX,^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH,REJECT
 
 # 解锁4K画质及1080P高码率 //app.bilibili.com
 画质解锁 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true
-
-[MITM]
-
-hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
