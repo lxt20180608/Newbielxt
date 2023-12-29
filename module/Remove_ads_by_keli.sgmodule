@@ -1,25 +1,42 @@
 #!name = 可莉广告过滤器
-#!desc = 作者：可莉 2023-11-25
+#!desc = 作者：可莉 2023-12-25
+
+[MITM]
+hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, guide-acs.m.taobao.com, heic.alicdn.com, client.app.coc.10086.cn, gd.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, mercury-gateway.ixiaochuan.cn, api.wfdata.club, mall.meituan.com, iyes.youku.com, acs.m.goofish.com
 
 [Rule]
-
-# 广告联盟
+# 字节跳动 - 广告服务商
 DOMAIN,ad.zijieapi.com,REJECT
 DOMAIN,i.snssdk.com,REJECT
 DOMAIN,is.snssdk.com,REJECT
-DOMAIN,open.e.kuaishou.com,REJECT
-DOMAIN-SUFFIX,miaozhen.com,REJECT
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
 DOMAIN-KEYWORD,-tos.pstatp.com,REJECT-DROP
 DOMAIN-KEYWORD,asiad.byteactivity,REJECT
-DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
 DOMAIN-KEYWORD,pangolin.snssdk.com,REJECT
+DOMAIN-KEYWORD,pangolin-sdk-toutiao,REJECT
 DOMAIN-KEYWORD,pglstatp-toutiao,REJECT
 DOMAIN-KEYWORD,video-cn.snssdk.com,REJECT
-# 字节跳动
-DOMAIN,ad.zijieapi.com,REJECT
-DOMAIN-KEYWORD,asiad.byteactivity,REJECT
-DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT
+# 快手联盟 - 广告服务商
+DOMAIN,open.e.kuaishou.com,REJECT
+# 秒针系统 - 广告服务商
+DOMAIN-SUFFIX,miaozhen.com,REJECT
+# 达佳互联 - 广告服务商
+DOMAIN-SUFFIX,adukwai.com,REJECT
+# 艾狄墨搏 - 广告服务商
+DOMAIN,monitor.ssp.admobile.top,REJECT
+DOMAIN,sdk.ssp.admobile.top,REJECT
+DOMAIN-SUFFIX,admobile.top,REJECT
+# 极光 - 广告服务商
+DOMAIN-SUFFIX,jiguang.cn,REJECT
+# 百度联盟 - 广告服务商
+DOMAIN-SUFFIX,union.baidu.cn,REJECT
+DOMAIN-SUFFIX,union.baidu.com,REJECT
+# 腾讯优量汇 - 广告服务商
+DOMAIN,mazu.m.qq.com,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+#DOMAIN-SUFFIX,gdt.qq.com,REJECT
+# 天目 - 广告服务商
+DOMAIN,sdk.tianmu.mobi,REJECT
 # 阿里巴巴
 DOMAIN,ossgw.alicdn.com,REJECT
 DOMAIN,ems.youku.com,REJECT
@@ -40,6 +57,10 @@ DOMAIN-SUFFIX,l.qq.com,REJECT
 DOMAIN-KEYWORD,trace.qq.com,REJECT
 DOMAIN-KEYWORD,trace.video.qq.com,REJECT
 IP-CIDR,47.110.187.87/32,REJECT
+# 手机QQ
+DOMAIN,adsmind.gdtimg.com,REJECT
+DOMAIN,pgdt.gtimg.cn,REJECT
+DOMAIN-SUFFIX,gdt.qq.com,REJECT
 # 百度
 DOMAIN,mobads.baidu.com,REJECT
 DOMAIN-SUFFIX,pos.baidu.com,REJECT
@@ -88,9 +109,21 @@ IP-CIDR,122.229.8.47/32,REJECT
 IP-CIDR,122.229.29.89/32,REJECT
 # 弃用地址
 DOMAIN,waapdg.jd.com,REJECT
+# 小象买菜 - 兜底TCP请求下发广告
+IP-CIDR,101.50.8.64/32,REJECT,no-resolve
+IP-CIDR,101.50.8.75/32,REJECT,no-resolve
+IP-CIDR,103.37.152.161/32,REJECT,no-resolve
+IP-CIDR,103.37.152.162/32,REJECT,no-resolve
+IP-CIDR,103.63.160.64/32,REJECT,no-resolve
+IP-CIDR,119.29.48.215/32,REJECT,no-resolve
+IP-CIDR,119.29.48.215/32,REJECT,no-resolve
+IP-CIDR,202.90.110.8/32,REJECT,no-resolve
+IP-CIDR,203.76.217.241/32,REJECT,no-resolve
+IP-CIDR,203.76.217.243/32,REJECT,no-resolve
+IP-CIDR,203.76.217.37/32,REJECT,no-resolve
+IP-CIDR6,2405:1480:3000:303f::303f/128,REJECT,no-resolve
 
 [URL Rewrite]
-
 # 摩托范弹窗广告
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk - reject
 # 最右
@@ -152,18 +185,10 @@ DOMAIN,waapdg.jd.com,REJECT
 ^https:\/\/god\.gameyw\.netease\.com\/v1\/ad - reject
 ^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
 ^https?:\/\/sdk1xyajs\.data\.kuiniuca\.com - reject
+# 威锋 - 开屏广告
+^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/yesList - reject
 
 [Map Local]
-
-#向日葵 #开屏广告 #主机名client-api-v2.oray.com
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-#向日葵 #首页文字广告
-^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-#向日葵 #发现页广告
-^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
 # 米家
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
@@ -227,7 +252,7 @@ DOMAIN,waapdg.jd.com,REJECT
 ^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 # 山东移动 //m.sd.10086.cn
-https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome\.do data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # 江苏移动 //wap.js.10086.cn
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v1\/market_content\.page\.queryHasIt data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -251,11 +276,27 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 
 ^https?:\/\/conf-darwin\.xycdn\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
+# 小象超市 - 开屏广告
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 小象超市 - 首页领券悬浮红包
+^https:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 闲鱼 - 开屏广告
+^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 闲鱼 - 底部浮层发布球
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+#向日葵 #开屏广告 #主机名client-api-v2.oray.com
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+#向日葵 #首页文字广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+#向日葵 #发现页广告
+^https:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
 [Script]
-
-# 快手联盟、优量汇、穿山甲
+# 快手联盟、腾讯优量汇、字节跳动穿山甲
 移除广告联盟广告 = type=http-response, pattern=^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Remove_ads_by_keli/adsense.js, requires-body=true
-
-[MITM]
-
-hostname = %APPEND% api-access.pangolin-sdk-toutiao.com, nex.163.com, c.m.163.com, g1.163.com, client.mail.163.com, interfac*.music.163.com, support.you.163.com, api.mh.163.com, p.du.163.com, api.m.mi.com, *.huami.com, api.jr.mi.com, home.mi.com, shopapi.io.mi.com, img.dailmo.com, img.allahall.com, app.zhoudamozi.com, api.pinduoduo.com, api.yangkeduo.com, gw.alicdn.com, acs.m.taobao.com, ccmsupport-sz.tenpay.com, m.qianbao.qq.com, app.missevan.com, mi.gdt.qq.com, open.e.kuaishou.com, hfapp-service.qweather.net, home.umetrip.com, umerp.umetrip.com, us.l.qq.com, dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, guide-acs.m.taobao.com, heic.alicdn.com, client.app.coc.10086.cn, gd.10086.cn, m.sd.10086.cn, gx.10086.cn, api.ahmobile.cn, wap.js.10086.cn, god.gameyw.netease.com, v6ii.gdt.qq.com, client-api-v2.oray.com, sfo.mddcloud.com.cn, mob.mddcloud.com.cn, toblog.ctobsnssdk.com, t-dsp.pinduoduo.com, mobads-pre-config.cdn.bcebos.com, sdk1xyajs.data.kuiniuca.com, conf-darwin.xycdn.com, *.ubixioe.com, mercury-gateway.ixiaochuan.cn
