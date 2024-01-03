@@ -1,5 +1,5 @@
 #!name = 微博去广告
-#!desc = 作者：RuCu6 2023-12-16
+#!desc = 作者：RuCu6 2024-01-03
 
 [MITM]
 hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
