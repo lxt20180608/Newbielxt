@@ -1,5 +1,5 @@
 #!name = IP-Check
-#!desc = 作者：Rabbit-Spec 22-08-14
+#!desc = 作者：Rabbit-Spec 2022-08-14
 
 [Panel]
 IP-Check = script-name=IP-Check, title="节点详情", content="请刷新", style=info, update-interval=1
