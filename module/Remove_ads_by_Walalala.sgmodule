@@ -2,7 +2,7 @@
 #!desc = 作者：RuCu6 2024-01-11
 
 [MITM]
-hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, tiebac.baidu.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
+hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, tiebac.baidu.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
 
 [URL Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -79,15 +79,6 @@ hostname = %APPEND% ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw
 
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-# 百度云 //pan.baidu.com, update.pan.baidu.com
-^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
-^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-
 # 美团 & 美团外卖//flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
@@ -153,13 +144,6 @@ jingdong = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.actio
 
 # 京东极速版 //api.m.jd.com
 replaceBody = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=-1, timeout=30, argument=jdLiteAdvertisingVO->rucu6
-
-# 酷安 //api.coolapk.com
-coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
-
-coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
-
-coolapk = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body=true, max-size=-1, timeout=60
 
 # 贴吧全面去广告 //tiebac.baidu.com
 tiebaJson = type=http-response, pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body=true, max-size=-1, timeout=60
