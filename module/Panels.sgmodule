@@ -7,7 +7,7 @@
 
 节假提醒 = script-name=节假提醒,update-interval=3600
 
-网络信息 = script-name=网络信息,title=网络信息,content=请刷新,style=info,update-interval=60
+网络信息 = script-name=网络信息,title=网络信息,content=请刷新,style=info,update-interval=43200
 
 刷新DNS = script-name=刷新DNS,update-interval=600
 
@@ -21,7 +21,7 @@ Telecom_panel= script-path=https://github.com/ChinaTelecomOperators/ChinaTelecom
 
 节假提醒 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
 
-网络信息 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/ipcheck.js
+网络信息 = type=generic,timeout=8,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/Netisp.js
 
 刷新DNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon=arrow.clockwise&color=#5AC8FA&server=false
 
