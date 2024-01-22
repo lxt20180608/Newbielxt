@@ -1,9 +1,6 @@
 #!name = 微博去广告
 #!desc = 作者：RuCu6 2024-01-03
 
-[MITM]
-hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
-
 [URL Rewrite]
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
 
@@ -85,3 +82,6 @@ weibo = type=http-response, pattern=^https:\/\/wbapp\.uve\.weibo\.com\/(preload\
 
 # 会员图标
 weibo = type=http-response, pattern=^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\?, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.weibo.cn, *.weibo.com, weibo.com
