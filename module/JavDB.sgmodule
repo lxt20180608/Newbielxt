@@ -1,0 +1,11 @@
+#!name=JavDB 解锁
+#!desc=作者：ycq007 
+
+[Script]
+# > javdb 解锁永久会员
+javbdvipcrack = type=http-response, pattern=^https?:\/\/.*\/api\/v1\/users, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/javbdvipcrack.js, requires-body=true, max-size=-1, timeout=60
+
+javdbvipcrack = type=http-request, pattern=^https?:\/\/.*\/api\/v1\/(movies\/.*\/play|startup), script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/javdbvipcrack.js, timeout=60
+
+[MITM]
+hostname = %APPEND% api.pxxgg.xyz, api.ujvnmkx.cn, jdforrepam.com, api.yijingluowangluo.xyz, api.wwwuh5.cn, api.hechuangxinxi.xyz
