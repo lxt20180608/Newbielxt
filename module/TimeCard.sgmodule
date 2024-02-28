@@ -1,5 +1,5 @@
-#!name=moyu
-#!desc=moyu
+#!name = 节假日提醒
+#!desc = 作者：Yuheng0101 2024-02-28
 
 [Script]
 摸鱼来啦 = type=cron, cronexp="6 9 * * *", script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js, timeout=60, wake-system=1
