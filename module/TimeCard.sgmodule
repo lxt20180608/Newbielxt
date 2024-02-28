@@ -1,1 +1,5 @@
+#!name=moyu
+#!desc=moyu
 
+[Script]
+摸鱼来啦 = type=cron, cronexp="6 9 * * *", script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js, timeout=60, wake-system=1
