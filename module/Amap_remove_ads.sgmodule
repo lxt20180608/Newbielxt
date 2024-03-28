@@ -1,5 +1,6 @@
 #!name = 高德地图去广告
 #!desc = 作者：RuCu6 kokoryh 2024-02-11
+#!category = 去广告模块
 
 [Rule]
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT
