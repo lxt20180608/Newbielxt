@@ -1,5 +1,6 @@
 #!name = 微博去广告
 #!desc = 作者：RuCu6 2024-01-22
+#!category = 去广告模块
 
 [URL Rewrite]
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
