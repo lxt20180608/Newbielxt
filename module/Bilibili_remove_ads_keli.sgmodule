@@ -1,5 +1,6 @@
 #!name = Bilibili去广告
 #!desc = 作者：Maasea RuCu6 2023-12-28
+#!category = 去广告模块
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
