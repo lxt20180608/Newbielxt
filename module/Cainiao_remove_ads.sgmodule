@@ -1,5 +1,6 @@
 #!name = 菜鸟去广告
 #!desc = 作者：keywos RuCu6 2023-02-18
+#!category = 去广告模块
 
 [Rule]
 DOMAIN,adsmind.ugdtimg.com,REJECT
