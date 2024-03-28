@@ -1,5 +1,6 @@
 #!name = 节假日提醒
 #!desc = 作者：Yuheng0101 2024-02-28
+#!category = Panel模块
 
 [Script]
 节假日提醒 = type=cron, cronexp="0 7 * * *", script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js, timeout=60, wake-system=1
