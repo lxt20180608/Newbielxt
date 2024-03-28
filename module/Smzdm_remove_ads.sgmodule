@@ -1,5 +1,6 @@
 #!name = 什么值得买去广告
 #!desc = 作者：ZenmoFeiShi 2023-12-28
+#!category = 去广告模块
 
 [MITM]
 hostname = %APPEND% haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, qianbao.smzdm.com
