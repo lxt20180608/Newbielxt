@@ -1,5 +1,6 @@
 #!name = Google搜索重定向
 #!desc = 作者：可莉🅥 2023-11-14
+#!category = APP相关模块
 
 [URL Rewrite]
 
