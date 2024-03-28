@@ -1,5 +1,6 @@
 #!name = Panels
 #!desc = 信息面板模块 2024-01-05
+#!category = Panel模块
 
 [Panel]
 
