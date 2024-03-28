@@ -1,5 +1,6 @@
 #!name = 京东去广告
 #!desc = 作者：RuCu6 2023-12-20
+#!category = 去广告模块
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
