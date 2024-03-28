@@ -1,5 +1,6 @@
 #!name = 知乎去广告
 #!desc = 作者：RuCu6 blackmatrix7 2023-01-24
+#!category = 去广告模块
 
 [URL Rewrite]
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
