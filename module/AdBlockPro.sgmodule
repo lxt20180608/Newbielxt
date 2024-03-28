@@ -1,5 +1,6 @@
 #!name = AdBlocker解锁
 #!desc = 作者：Yu9191 2024-01-10
+#!category = APP相关模块
 
 [MITM]
 hostname = %APPEND% api.adblockpro.app
