@@ -1,5 +1,6 @@
 #!name = Bilibili去广告
 #!desc = 作者：RuCu6 2023-11-15
+#!category = 去广告模块
 
 [URL Rewrite]
 
