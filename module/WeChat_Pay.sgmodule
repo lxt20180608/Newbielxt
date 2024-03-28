@@ -1,1 +1,10 @@
+#!name=wechat_pay_coupon
+#!desc=wechat_pay_coupon
 
+[Script]
+微付金币² = type=http-response, pattern=https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login, script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, requires-body=true, max-size=0, script-update-interval=0, timeout=30
+
+微付金币 = type=cron, cronexp="30 9 * * *", script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, script-update-interval=0, timeout=60
+
+[MITM]
+hostname = %APPEND% payapp.weixin.qq.com
