@@ -1,5 +1,6 @@
 #!name = 小红书去广告
 #!desc = 作者：RuCu6 2023-12-31
+#!category = 去广告模块
 
 [MITM]
 hostname = %APPEND% edith.xiaohongshu.com, www.xiaohongshu.com
