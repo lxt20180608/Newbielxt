@@ -1,7 +1,4 @@
 # PrivateTracker
-HOST-KEYWORD,announce
-HOST-KEYWORD,torrent
-HOST-KEYWORD,tracker
 HOST-SUFFIX,1ptba.com
 HOST-SUFFIX,52pt.site
 HOST-SUFFIX,aidoru-online.me
