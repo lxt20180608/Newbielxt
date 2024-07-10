@@ -1,17 +1,21 @@
 #!name = 微信公众号去广告
-#!desc = 作者：RuCu6 2023-09-08
+#!desc = 作者：RuCu6 2023-04-14
 #!category = 去广告模块
 
-[Script]
-
-# [Script]
-#微信公众号去广告_11 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+[Rule]
+DOMAIN,wxsnsdy.wxs.qq.com,REJECT
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
+URL-REGEX,^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\?,REJECT-TINYGIF
 
 [Map Local]
-
 # 移除公众号中的推广内容 //mp.weixin.qq.com
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/snssvpdownload\/SH\/reserved\/ads_svp_video data-type=text data="{}" status-code=200
+
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
+
+[Script]
+# [Script]
+#微信公众号去广告 = type=http-response, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true
 
 [MITM]
-
-hostname = %APPEND% mp.weixin.qq.com
+hostname = %APPEND% mp.weixin.qq.com, *.wxs.qq.com
