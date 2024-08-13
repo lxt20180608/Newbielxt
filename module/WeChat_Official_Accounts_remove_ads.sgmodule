@@ -1,5 +1,5 @@
 #!name = 微信公众号去广告
-#!desc = 作者：RuCu6 2023-04-14
+#!desc = 作者：RuCu6 2023-07-13
 #!category = 去广告模块
 
 [Rule]
@@ -9,7 +9,7 @@ URL-REGEX,^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodo
 
 [Map Local]
 # 移除公众号中的推广内容 //mp.weixin.qq.com
-^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/snssvpdownload\/SH\/reserved\/ads_svp_video data-type=text data="{}" status-code=200
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ data-type=text data="{}" status-code=200
 
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
 
