@@ -1,9 +1,0 @@
-#!name = AdBlocker解锁
-#!desc = 作者：Yu9191 2024-01-10
-#!category = APP相关模块
-
-[MITM]
-hostname = %APPEND% api.adblockpro.app
-
-[Script]
-adblockpro = type=http-response, pattern=^https:\/\/api\.adblockpro\.app\/verify, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/adblockpro.js, requires-body=true, max-size=-1, timeout=60
