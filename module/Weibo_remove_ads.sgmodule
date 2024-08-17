@@ -1,5 +1,5 @@
 #!name = 微博去广告
-#!desc = 作者：RuCu6 2024-07-26
+#!desc = 作者：RuCu6 2024-08-17
 #!category = 去广告模块
 
 [URL Rewrite]
@@ -13,6 +13,8 @@
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? data-type=text data="{}" status-code=200
 
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? data-type=text data="{}" status-code=200
+
+^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\?flowId=\d+&invokeType=manual&manualType=scroll&pageDataType=flow&taskType=loadMore& data-type=text data="{}" status-code=200
 
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_positive|push_info)\? data-type=text data="{}" status-code=200
 
