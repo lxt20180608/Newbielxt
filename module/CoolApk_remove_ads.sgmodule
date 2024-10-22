@@ -2,18 +2,15 @@
 #!desc = 作者：RuCu6 2023-11-15
 #!category = 去广告模块
 
-[Script]
-
-移除酷安广告_10 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//CoolApk/CoolApk_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
-
-移除酷安广告_11 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//CoolApk/CoolApk_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
-
-移除酷安广告_12 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script//CoolApk/CoolApk_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
-
 [Map Local]
+^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data-type=text data="{}" status-code=200
 
-^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+[Script]
+移除酷安广告 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?, script-path=https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body=true
+
+移除酷安广告 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init), script-path=https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body=true
+
+移除酷安广告 = type=http-response, pattern=^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\?, script-path=https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body=true
 
 [MITM]
-
 hostname = %APPEND% api.coolapk.com
