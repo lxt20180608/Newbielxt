@@ -1,12 +1,11 @@
 #!name = 微信公众号去广告
-#!desc = 作者：RuCu6 2024-09-05
+#!desc = 作者：RuCu6 2024-11-28
 #!category = 去广告模块
 
 [Rule]
-DOMAIN-SUFFIX,wxs.qq.com,REJECT,pre-matching
+DOMAIN-SUFFIX,wxs.qq.com,REJECT,extended-matching,pre-matching
 
 [Map Local]
-# ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? data-type=text data="{}" status-code=200
 
 [MITM]
