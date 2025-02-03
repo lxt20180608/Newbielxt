@@ -1,6 +1,6 @@
 # mihomo 配置
-# 日期：2025-01-24
-# 配置作者：https://t.me/iKeLee 仅做修改
+# 日期：2024-12-20 17:03:25
+# 配置作者：https://t.me/iKeLee
 # 适用版本：所有使用 mihomo 核心的程序
 port: 7890
 socks-port: 7891
@@ -608,10 +608,10 @@ NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, 
 
 # 锚点 - 节点订阅
 proxy-providers: 
-  订阅名称:
-    url: '机场订阅链接'
+  MyTelecom-iKeLee:
+    url: '待填写'
     <<: *NodeParam
-    path: './proxy_providers/生成的节点文件名称.yaml'
+    path: './proxy_providers/MyTelecom-iKeLee.yaml'
     override:
       additional-prefix: "" # 为订阅节点添加机场名称前缀
 
@@ -639,18 +639,22 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 proxy-groups: 
   - {name: 节点选择, type: select, include-all-providers: true, filter: *FilterAll, icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"}
   - {name: 下载节点, type: select, include-all-providers: true, filter: *FilterAll, proxies: [DIRECT], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"}
-  - {name: AI, type: select, proxies: [美国策略, 日本策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
-  - {name: Telegram, type: select, proxies: [香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
   - {name: 1Password, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PBS.png"}
-  - {name: Github, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
-  - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
+  - {name: AI, type: select, proxies: [节点选择, 美国策略, 日本策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"}
   - {name: Apple账户, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"}
+  - {name: CDN, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"}
   - {name: Emby, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"}
-  - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
-  - {name: TikTok, type: select, proxies: [香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
-  - {name: Twitter, type: select, proxies: [香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
+  - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"}
+  - {name: Netflix, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/netflix.svg"}
+  - {name: Github, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/github.svg"}
+  - {name: Google, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"}
+  - {name: OneDrive, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/onedrive.svg"}
   - {name: Steam, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/steam.svg"}
-  - {name: 兜底策略, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略, 节点选择], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
+  - {name: Telegram, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"}
+  - {name: TikTok, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/tiktok.svg"}
+  - {name: Twitter, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/twitter.svg"}
+  - {name: YouTube, type: select, proxies: [节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"}
+  - {name: 兜底策略, type: select, proxies: [DIRECT, 节点选择, 香港策略, 台湾策略, 新国策略, 日本策略, 美国策略, 韩国策略, 冷门策略], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg"}
 
   - {name: 香港策略, type: select, proxies: [👆香港手动选择策略组, ⏱香港时延优选策略组, 🚥香港故障转移策略组, 🎛香港负载均衡策略组], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/hk.svg"}
   - {name: 台湾策略, type: select, proxies: [👆台湾手动选择策略组, ⏱台湾时延优选策略组, 🚥台湾故障转移策略组, 🎛台湾负载均衡策略组], icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg"}
@@ -703,75 +707,75 @@ rule-providers:
     path: './rules/Lan.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/LAN_SPLITTER.yaml'
 
-  Direct:
+  AWAvenue-Ads:
     <<: *RuleProviders
-    path: './rules/Direct.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/Direct.yaml'
-
-  Proxy:
-    <<: *RuleProviders
-    path: './rules/Proxy.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/Proxy.yaml'
+    path: './rules/AWAvenue-Ads.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml'
+    interval: 600
+    behavior: domain
+    format: yaml
 
   ChinaDownloadCDN:
     <<: *RuleProviders
     path: './rules/ChinaDownloadCDN.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
+    
+  CDN_Domainset:
+    <<: *RuleProviders
+    path: ./rules/CDN_Domainset.txt
+    url: https://ruleset.skk.moe/Clash/domainset/cdn.txt
+    interval: 43200
+    behavior: domain
+    format: text
+    
+  CDN_NonIP:
+    <<: *RuleProviders
+    path: ./rules/CDN_NonIP.txt
+    url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt
+    interval: 43200
+    format: text
+
+  Direct:
+    <<: *RuleProviders
+    path: './rules/Direct.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Direct.yaml'
 
   InternationalDownloadCDN:
     <<: *RuleProviders
     path: './rules/InternationalDownloadCDN.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/InternationalDownloadCDN.yaml'
 
-  AI:
+  PrivateTracker:
     <<: *RuleProviders
-    path: './rules/AI.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
+    path: './rules/PrivateTracker.list'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/refs/heads/main/Ruleset/PrivateTracker.list'
+    format: text
 
-  TikTok:
+  Proxy:
     <<: *RuleProviders
-    path: './rules/TikTok.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/TikTok.yaml'
+    path: './rules/Proxy.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Proxy.yaml'
 
-  Game:
+  SpecialDomain:
     <<: *RuleProviders
-    path: './rules/Game.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/Game.yaml'
+    path: './rules/SpecialDomain.list'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/refs/heads/main/Ruleset/SpecialDomain.list'
+    format: text
 
   1Password:
     <<: *RuleProviders
     path: './rules/1PasswordUS.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/1PasswordUS.yaml'
-    
-  Github:
-    <<: *RuleProviders
-    path: './rules/Github.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml'
-    
-  Twitter:
-    <<: *RuleProviders
-    path: './rules/Twitter.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Twitter/Twitter.yaml'
 
-  Steam:
+  AI:
     <<: *RuleProviders
-    path: './rules/Steam.yaml'
-    url: 'https://rule.kelee.one/Clash/Steam.yaml'
+    path: './rules/AI.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
 
-  Netflix:
+  AppleID:
     <<: *RuleProviders
-    path: './rules/Netflix.yaml'
-    url: 'https://rule.kelee.one/Clash/Netflix.yaml'
-
-  Emby:
-    <<: *RuleProviders
-    path: './rules/Emby.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/EmbyServer.yaml'
-
-  iCloudChina:
-    <<: *RuleProviders
-    path: './rules/iCloudChina.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/iCloudChina.yaml'
+    path: './rules/AppleID.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AppleID.yaml'
 
   ApplePushNotificationService:
     <<: *RuleProviders
@@ -783,89 +787,112 @@ rule-providers:
     path: './rules/AppleSoftwareUpdates.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/AppleSoftwareUpdates.yaml'
 
-  AppleID:
-    <<: *RuleProviders
-    path: './rules/AppleID.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/AppleID.yaml'
-
   AppStore:
     <<: *RuleProviders
     path: './rules/AppStore.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/AppStore.yaml'
 
-  TestFlight:
+  Emby:
     <<: *RuleProviders
-    path: './rules/TestFlight.yaml'
-    url: 'https://rule.kelee.one/Clash/TestFlight.yaml'
+    path: './rules/Emby.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby_No_Resolve.yaml'
+
+  Game:
+    <<: *RuleProviders
+    path: './rules/Game.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Game.yaml'
+
+  Github:
+    <<: *RuleProviders
+    path: './rules/Github.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub_No_Resolve.yaml'
+
+  Google:
+    <<: *RuleProviders
+    path: './rules/Google.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google_No_Resolve.yaml'
+
+  iCloudChina:
+    <<: *RuleProviders
+    path: './rules/iCloudChina.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/iCloudChina.yaml'
 
   Microsoft:
     <<: *RuleProviders
     path: './rules/Microsoft.yaml'
     url: 'https://rule.kelee.one/Clash/Microsoft.yaml'
 
-  Google:
+  Netflix:
     <<: *RuleProviders
-    path: './rules/Google.yaml'
-    url: 'https://rule.kelee.one/Clash/Google.yaml'
+    path: './rules/Netflix.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml'
+
+  OneDrive:
+    <<: *RuleProviders
+    path: './rules/OneDrive.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml'
+
+  Steam:
+    <<: *RuleProviders
+    path: './rules/Steam.yaml'
+    url: 'https://rule.kelee.one/Clash/Steam.yaml'
 
   Telegram:
     <<: *RuleProviders
     path: './rules/Telegram.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/Telegram.yaml'
 
-  ESET_China:
+  TestFlight:
     <<: *RuleProviders
-    path: './rules/ESET_China.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
+    path: './rules/TestFlight.yaml'
+    url: 'https://rule.kelee.one/Clash/TestFlight.yaml'
+
+  TikTok:
+    <<: *RuleProviders
+    path: './rules/TikTok.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/TikTok.yaml'
+
+  Twitter:
+    <<: *RuleProviders
+    path: './rules/Twitter.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Twitter/Twitter_No_Resolve.yaml'
     
-  AWAvenue-Ads:
+  YouTube:
     <<: *RuleProviders
-    path: './rules/AWAvenue-Ads.yaml'
-    url: 'https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml'
-    interval: 600
-    behavior: domain
-    format: yaml
-    
-  PrivateTracker:
-    <<: *RuleProviders
-    path: './rules/PrivateTracker.list'
-    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/refs/heads/main/Ruleset/PrivateTracker.list'
-    format: text
-    
-  SpecialDomain:
-    <<: *RuleProviders
-    path: './rules/SpecialDomain.list'
-    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/refs/heads/main/Ruleset/SpecialDomain.list'
-    format: text
+    path: './rules/YouTube.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube_No_Resolve.yaml'
 
 # 规则指向
 rules:
   - RULE-SET, LAN, DIRECT
-  - RULE-SET, Direct, DIRECT
-  - RULE-SET, PrivateTracker, DIRECT
-  - RULE-SET, SpecialDomain, DIRECT
-  - RULE-SET, Proxy, 节点选择
+  - RULE-SET, AWAvenue-Ads, REJECT 
   - RULE-SET, ChinaDownloadCDN, DIRECT
+  - RULE-SET, CDN_Domainset,CDN
+  - RULE-SET, CDN_NonIP,CDN
+  - RULE-SET, Direct, DIRECT
   - RULE-SET, InternationalDownloadCDN, 下载节点
+  - RULE-SET, PrivateTracker, DIRECT
+  - RULE-SET, Proxy, 节点选择
+  - RULE-SET, SpecialDomain, DIRECT
+  - RULE-SET, 1Password, 1Password
   - RULE-SET, AI, AI
-  - RULE-SET, TikTok, TikTok
-  - RULE-SET, Steam, Steam
-  - RULE-SET, Game, DIRECT
-  - RULE-SET, Netflix, Netflix
-  - RULE-SET, Emby, Emby
-  - RULE-SET, TestFlight, DIRECT
-  - RULE-SET, iCloudChina, DIRECT
+  - RULE-SET, AppleID, Apple账户
   - RULE-SET, ApplePushNotificationService, DIRECT
   - RULE-SET, AppleSoftwareUpdates, DIRECT
-  - RULE-SET, AppleID, Apple账户
   - RULE-SET, AppStore, DIRECT
-  - RULE-SET, 1Password, 1Password
+  - RULE-SET, Emby, Emby
+  - RULE-SET, Game, DIRECT
   - RULE-SET, Github, Github
-  - RULE-SET, Twitter, Twitter
+  - RULE-SET, Google, Google
+  - RULE-SET, iCloudChina, DIRECT
   - RULE-SET, Microsoft, Microsoft
-  - RULE-SET, Google, 节点选择
+  - RULE-SET, Netflix, Netflix
+  - RULE-SET, OneDrive, OneDrive
+  - RULE-SET, Steam, Steam
   - RULE-SET, Telegram, Telegram
-  - RULE-SET, ESET_China, DIRECT
-  - RULE-SET, AWAvenue-Ads, REJECT 
+  - RULE-SET, TestFlight, DIRECT
+  - RULE-SET, TikTok, TikTok
+  - RULE-SET, Twitter, Twitter
+  - RULE-SET, YouTube, YouTube
   - GEOIP, CN, DIRECT
   - MATCH, 兜底策略
