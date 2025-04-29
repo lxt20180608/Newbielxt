@@ -1,6 +1,6 @@
-#!name=Github 429
-#!desc=解除 Github 429 限制
-
+#!name=Github_429
+#!desc=作者：mieq 2025-04-29
+#!category = APP相关模块
 
 [Header Rewrite]
 http-request raw.githubusercontent.com header-replace Accept-Language en-us
