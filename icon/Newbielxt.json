@@ -1,0 +1,22 @@
+{
+  "name":"Newbielxt", 
+  "icons":[
+    {"name":"AiFun", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/AiFun.png"},
+    {"name":"BigME", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/BigME.png"},
+    {"name":"Cherry", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/Cherry.png"},
+    {"name":"Ciyy", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/Ciyy.png"},
+    {"name":"CoffeeCloud", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/CoffeeCloud.png"},
+    {"name":"DarkForest", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/DarkForest.png"},
+    {"name":"Echo", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/Echo.png"},
+    {"name":"FatCat", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/FatCat.png"},
+    {"name":"M78Star", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/M78Star.png"},
+	{"name":"NiceDuck", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/NiceDuck.png"},
+    {"name":"NightFuryx", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/NightFuryx.png"},
+    {"name":"OUO", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/OUO.png"},
+    {"name":"Shell", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/Shell.png"},
+    {"name":"To2", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/To2.png"},
+    {"name":"VikingLinks", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/VikingLinks.png"},
+    {"name":"YkkCloud", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/YkkCloud.png"},
+    {"name":"YuShe", "url":"https:\/\/raw.githubusercontent.com\/lxt20180608\/Newbielxt\/main\/icon\/YuShe.png"}
+  ]
+}
