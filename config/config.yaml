@@ -711,7 +711,7 @@ rule-providers:
   AWAvenue-Ads:
     <<: *RuleProviders
     path: './rules/AWAvenue-Ads.yaml'
-    url: 'https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml'
     interval: 600
     behavior: domain
     format: yaml
@@ -749,7 +749,7 @@ rule-providers:
   PrivateTracker:
     <<: *RuleProviders
     path: './rules/PrivateTracker.list'
-    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/refs/heads/main/Ruleset/PrivateTracker.list'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/main/Ruleset/PrivateTracker.list'
     format: text
 
   Proxy:
@@ -760,7 +760,7 @@ rule-providers:
   SpecialDomain:
     <<: *RuleProviders
     path: './rules/SpecialDomain.list'
-    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/refs/heads/main/Ruleset/SpecialDomain.list'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/lxt20180608/Newbielxt/main/Ruleset/SpecialDomain.list'
     format: text
 
   1Password:
@@ -796,7 +796,7 @@ rule-providers:
   Emby:
     <<: *RuleProviders
     path: './rules/Emby.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Emby/Emby_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby_No_Resolve.yaml'
 
   Game:
     <<: *RuleProviders
@@ -806,12 +806,12 @@ rule-providers:
   Github:
     <<: *RuleProviders
     path: './rules/Github.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml'
 
   Google:
     <<: *RuleProviders
     path: './rules/Google.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml'
 
   iCloudChina:
     <<: *RuleProviders
@@ -826,12 +826,12 @@ rule-providers:
   Netflix:
     <<: *RuleProviders
     path: './rules/Netflix.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml'
 
   OneDrive:
     <<: *RuleProviders
     path: './rules/OneDrive.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml'
 
   Steam:
     <<: *RuleProviders
@@ -856,12 +856,12 @@ rule-providers:
   Twitter:
     <<: *RuleProviders
     path: './rules/Twitter.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Clash/Twitter/Twitter_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml'
     
   YouTube:
     <<: *RuleProviders
     path: './rules/YouTube.yaml'
-    url: 'https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube_No_Resolve.yaml'
+    url: 'https://github.boki.moe/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml'
 
 # 规则指向
 rules:
