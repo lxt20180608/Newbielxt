@@ -28,6 +28,25 @@ DOMAIN-SUFFIX,gitv.tv
 DOMAIN-SUFFIX,cctv.cn
 DOMAIN-SUFFIX,yangshipin.cn
 DOMAIN-SUFFIX,gcable.cn
+# 学术域名
+DOMAIN-SUFFIX,sciencedirectassets.com
+DOMAIN-SUFFIX,readspeaker.com
+DOMAIN-SUFFIX,webofknowledge.com
+DOMAIN-KEYWORD,pubmed
+DOMAIN-KEYWORD,springer
+DOMAIN-KEYWORD,ieee
+DOMAIN-KEYWORD,elsevier
+DOMAIN-KEYWORD,sciencedirect
+DOMAIN-KEYWORD,nature
+DOMAIN-KEYWORD,tandfonline
+DOMAIN-SUFFIX,elsevier.com
+DOMAIN-SUFFIX,edu.cn
+DOMAIN-SUFFIX,webofscience.com
+DOMAIN-SUFFIX,tandfonline.com
+DOMAIN-SUFFIX,link.springer.com
+DOMAIN-SUFFIX,onlinelibrary.wiley.com
+DOMAIN-SUFFIX,sciencedirect.com
+DOMAIN-SUFFIX,taylorfrancis.com
 IP-CIDR,183.206.0.0/15,DIRECT,no-resolve
 IP-CIDR,223.5.5.5/32,DIRECT,no-resolve
 IP-CIDR,27.36.0.0/14,DIRECT,no-resolve
