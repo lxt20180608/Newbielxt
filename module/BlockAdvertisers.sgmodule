@@ -1,5 +1,5 @@
 #!name = 广告平台拦截器
-#!desc = 作者：可莉🅥 2024-12-04 优先级最高
+#!desc = 作者：可莉🅥 2025-05-14 优先级最高
 #!category = 去广告模块
 
 [Rule]
@@ -43,6 +43,7 @@ DOMAIN,mssdk-bu.bytedance.com,REJECT,extended-matching,pre-matching
 DOMAIN,toblog.ctobsnssdk.com,REJECT,extended-matching,pre-matching
 DOMAIN,mssdk.volces.com,REJECT,extended-matching,pre-matching
 DOMAIN,pangolin.snssdk.com,REJECT,extended-matching,pre-matching
+DOMAIN,lf-cdn-tos.bytescm.com,REJECT,extended-matching,pre-matching
 DOMAIN,gromore.pangolin-sdk-toutiao.com,REJECT,extended-matching,pre-matching
 DOMAIN,ether-pack.pangolin-sdk-toutiao.com,REJECT,extended-matching,pre-matching
 DOMAIN-KEYWORD,-ad-sign.byteimg.com,REJECT,extended-matching,pre-matching
@@ -253,6 +254,7 @@ DOMAIN-SUFFIX,bridgeoos.com,REJECT,extended-matching,pre-matching
 DOMAIN,ad-evods.tianya.tv,REJECT,extended-matching,pre-matching
 DOMAIN,adx.tuia.cn,REJECT,extended-matching,pre-matching
 DOMAIN-SUFFIX,66mobi.com,REJECT,extended-matching,pre-matching
+DOMAIN,rpe.xdplt.com,REJECT,extended-matching,pre-matching
 
 [URL Rewrite]
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ - reject
