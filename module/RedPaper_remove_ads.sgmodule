@@ -1,9 +1,9 @@
 #!name = 小红书去广告
-#!desc = 作者：可莉🅥 2025-04-04
+#!desc = 作者：可莉🅥 2025-05-13
 #!category = 去广告模块
 
 [Rule]
-AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
+AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com,extended-matching)),REJECT
 
 [Body Rewrite]
 http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/banner_list$ 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
