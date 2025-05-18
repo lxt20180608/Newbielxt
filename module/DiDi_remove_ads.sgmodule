@@ -1,10 +1,9 @@
 #!name = 滴滴出行去广告
-#!desc = 作者：ZenmoFeiShi 2025-03-06
+#!desc = 作者：ZenmoFeiShi 2025-05-13
 #!category = 去广告模块
 
 [Rule]
-DOMAIN,hd.xiaojukeji.com,REJECT
-DOMAIN,gwp.xiaojukeji.com,REJECT
+DOMAIN,gwp.xiaojukeji.com,REJECT,extended-matching,pre-matching
 AND,((IP-ASN,45090,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 AND,((IP-ASN,63646,no-resolve),(DEST-PORT,25641),(PROTOCOL,TCP)),REJECT
 
