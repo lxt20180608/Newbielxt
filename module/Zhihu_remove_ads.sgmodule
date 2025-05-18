@@ -1,5 +1,5 @@
 #!name = 知乎去广告
-#!desc = 作者：RuCu6 2025-04-04
+#!desc = 作者：RuCu6 2025-05-13
 #!category = 去广告模块
 
 [Rule]
@@ -90,4 +90,4 @@ http-response-jq ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|
 拦截服务器推送配置 config all = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\?, script-path=https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body=true
 
 [MITM]
-hostname = %APPEND% *.zhihu.com
+hostname = %APPEND% api.zhihu.com, appcloud2.zhihu.com, link.zhihu.com, m-cloud.zhihu.com, page-info.zhihu.com, www.zhihu.com, zhuanlan.zhihu.com
