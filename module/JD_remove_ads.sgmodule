@@ -3,6 +3,7 @@
 #!category = 去广告模块
 
 [Rule]
+# AND, ((PROTOCOL, TCP), (DOMAIN, api.m.jd.com)), REJECT-NO-DROP // 会导致商品评价无法查看
 URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT,extended-matching
 
 [Body Rewrite]
