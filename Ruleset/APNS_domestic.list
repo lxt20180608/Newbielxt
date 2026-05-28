@@ -1,4 +1,9 @@
 # 苹果推送服务
 DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,gateway.push.apple.com
+DOMAIN-SUFFIX,courier.push.apple.com
+DOMAIN-SUFFIX,api.push.apple.com
+DOMAIN-SUFFIX,*.push.apple.com
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-KEYWORD,apple.com.edgekey.net
+DOMAIN-SUFFIX,apple-relay.apple.com
